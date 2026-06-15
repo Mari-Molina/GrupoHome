@@ -39,12 +39,14 @@
   </nav>
 </body>
 <script>
-document.addEventListener("click", function (e) {
-    const link = e.target.closest("a");
+function cerrarMenu() {
+    window.parent.postMessage("closeMenu", "*");
+}
 
-    if (link) {
-        window.parent.postMessage("closeMenu", "*");
-    }
+document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", function () {
+        cerrarMenu();
+    });
 });
 </script>
 </html>
