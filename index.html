@@ -59,10 +59,11 @@ iframe {
 /* MÓVIL */
 @media (max-width: 768px) {
     body {
-        grid-template-rows: 150px 1fr;
+        grid-template-rows: 150px auto 1fr;
         grid-template-columns: 1fr;
         grid-template-areas:
             "header"
+            "nav"
             "main";
     }
 
@@ -71,18 +72,17 @@ iframe {
     }
 
     nav {
-        position: absolute;
-        top: 150px;
-        left: 0;
-        width: 70%;
-        height: calc(100% - 150px);
-        background: #ddd;
         display: none;
-        z-index: 1000;
     }
 
     nav.active {
         display: block;
+        height: auto;
+        min-height: 200px;
+    }
+
+    main {
+        min-height: calc(100vh - 150px);
     }
 }
     </style>
