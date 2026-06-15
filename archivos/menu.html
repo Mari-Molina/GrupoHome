@@ -39,13 +39,11 @@
   </nav>
 </body>
 <script>
-function cerrarMenu() {
-    window.parent.postMessage("closeMenu", "*");
-}
-
-document.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", function () {
-        cerrarMenu();
+window.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("a").forEach(a => {
+        a.addEventListener("click", () => {
+            window.parent.postMessage("closeMenu", "*");
+        });
     });
 });
 </script>
