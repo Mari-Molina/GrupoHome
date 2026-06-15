@@ -1,0 +1,87 @@
+/* Reset simple */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f9f9f9;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+
+}
+
+h3 {
+  font-weight: 600px;
+  font-size: 1.1rem;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  padding: 15px 0;
+  border-top: 1px solid #ddd;
+}
+
+main.contacto {
+   width: 100%;
+    background: #fff;
+    padding: 20px 30px;
+    margin: 0 auto 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+
+p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.redes-sociales {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.redes-sociales a img {
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.redes-sociales a img:hover {
+    transform: scale(1.1);
+}
+.reseña-google {
+    display: inline-block; /* Para que el borde se ajuste solo al texto */
+    border: 2px solid green; /* Recuadro verde de 2px */
+    padding: 5px 10px;       /* Espacio interno para que no quede justo al texto */
+    border-radius: 5px;      /* Bordes redondeados, opcional */
+    color: green;            /* Color del texto para que combine */
+    text-decoration: none;   /* Quitar subrayado */
+    transition: background-color 0.3s ease;
+}
+
+.reseña-google:hover {
+    background-color: #e0f2e9; /* Fondo suave verde al pasar el ratón */
+}
+.marquee {
+  background-color: yellow;
+  color: blue;
+  font-weight: bold;
+  padding: 5px 0;
+}

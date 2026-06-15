@@ -1,0 +1,50 @@
+body {
+  background-color: #FFEB00;
+  font-family: Arial, sans-serif;
+  padding: 10px;
+}
+
+nav {
+  width: 180px;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+nav li {
+  margin-bottom: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+nav a:hover {
+  color: #0077cc;
+}
+
+nav img {
+  height: 45px;
+  vertical-align: middle;
+}
+
+.inicio-link {
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.inicio-link img {
+  height: 20px;
+}
+
