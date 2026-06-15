@@ -38,4 +38,11 @@
     </ul>
   </nav>
 </body>
+<script>
+document.addEventListener("click", function (e) {
+    if (e.target.tagName === "A") {
+        window.parent.postMessage("closeMenu", "*");
+    }
+});
+</script>
 </html>
