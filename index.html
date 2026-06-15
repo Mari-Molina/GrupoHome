@@ -89,9 +89,14 @@ iframe {
 </head>
 <script>
 function toggleMenu() {
-    const nav = document.querySelector("nav");
-    nav.classList.toggle("active");
+    document.querySelector("nav").classList.toggle("active");
 }
+
+window.addEventListener("message", function (event) {
+    if (event.data === "closeMenu") {
+        document.querySelector("nav").classList.remove("active");
+    }
+});
 </script>
 <body>
     <header>
