@@ -48,16 +48,55 @@
             height: 100%;
           
         }
- @media (max-width: 768px) {
-    nav iframe {
+        .menu-btn {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* versión móvil */
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none; /* oculto por defecto */
+        grid-area: nav;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    body {
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main";
+    }
+}
+     @media (max-width: 768px) {
+     nav iframe {
         height: 60px;
         min-height: 60px;
     }
 }
     </style>
 </head>
+<script>
+function toggleMenu() {
+    const nav = document.querySelector("nav");
+    nav.classList.toggle("active");
+}
+</script>
 <body>
     <header>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
         <iframe src="archivos/logo.html" title="Logo"></iframe>
     </header>
     <nav>
