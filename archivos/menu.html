@@ -40,7 +40,9 @@
 </body>
 <script>
 document.addEventListener("click", function (e) {
-    if (e.target.tagName === "A") {
+    const link = e.target.closest("a");
+
+    if (link) {
         window.parent.postMessage("closeMenu", "*");
     }
 });
